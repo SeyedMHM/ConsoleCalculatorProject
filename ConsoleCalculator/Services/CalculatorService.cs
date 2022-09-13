@@ -5,22 +5,22 @@ namespace ConsoleCalculator.Services
 {
     public class CalculatorService : ICalculatorService
     {
-        private readonly ICalculatorValidation _calculatorValidation;
+        private readonly ICalculatorValidationService _calculatorValidationService;
 
-        public CalculatorService(ICalculatorValidation calculatorValidation)
+        public CalculatorService(ICalculatorValidationService calculatorValidationService)
         {
-            _calculatorValidation = calculatorValidation;
+            _calculatorValidationService = calculatorValidationService;
         }
 
         public int GetLineCount(string inputLineCount)
         {
-            _calculatorValidation.ValidateLineCount(inputLineCount);
+            _calculatorValidationService.ValidateLineCount(inputLineCount);
             return Convert.ToInt32(inputLineCount);
         }
         
         public int CalculateInput(string operations)
         {
-            _calculatorValidation.ValidateLineOfOperations(operations);
+            _calculatorValidationService.ValidateLineOfOperations(operations);
 
             operations = ReplacePlusOperandWithComma(operations);
 
