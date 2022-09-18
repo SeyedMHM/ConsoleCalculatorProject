@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Data;
+using System.Text.RegularExpressions;
 
 namespace ConsoleCalculator.Services
 {
@@ -8,15 +9,15 @@ namespace ConsoleCalculator.Services
         {
             if (!Regex.IsMatch(lineCount, "[0-9]"))
             {
-                throw new Exception("Your input is not valid!");
+                throw new SyntaxErrorException("Your input is not valid!");
             }
         }
 
         public void ValidateLineOfOperations(string operations)
         {
-            if (!string.IsNullOrEmpty(operations))
+            if (string.IsNullOrEmpty(operations))
             {
-                throw new Exception("Your input is not valid!");
+                throw new SyntaxErrorException("Your input is not valid!");
             }
         }
     }

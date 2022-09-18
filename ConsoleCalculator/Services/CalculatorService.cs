@@ -29,6 +29,8 @@ namespace ConsoleCalculator.Services
         
         private string ReplacePlusOperandWithComma(string operations)
         {
+            operations = RemoveAdditionalComma(operations);
+
             var partOfOperators = operations.Split(",");
 
             if (operations.Split(",").Length > 1 && !(partOfOperators[1].StartsWith("-") || partOfOperators[1].StartsWith("+")))
@@ -39,15 +41,20 @@ namespace ConsoleCalculator.Services
             return string.Join("", partOfOperators);
         }
 
+        private string RemoveAdditionalComma(string operations)
+        {
+            return Regex.Replace(operations, @",{1,}", ",").Trim(',');
+        }
+
         private int CalculateStringOperation(string operations)
         {
             try
             {
                 return (int)new DataTable().Compute(operations, null);
             }
-            catch (Exception)
+            catch (SyntaxErrorException)
             {
-                throw new Exception("Your input is not valid!");
+                throw new SyntaxErrorException("Your input is not valid!");
             }
         }
     }

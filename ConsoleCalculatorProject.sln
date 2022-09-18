@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCalculator", "ConsoleCalculator\ConsoleCalculator.csproj", "{DE897CEF-BF1F-4108-9CC8-608B520F66D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCalculator", "ConsoleCalculator\ConsoleCalculator.csproj", "{DE897CEF-BF1F-4108-9CC8-608B520F66D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F62934E8-E416-4EC8-9BD0-91A7114B25CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A9BE6407-DFD2-45E6-A36D-4CD6FFB646A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCalculator.Test", "ConsoleCalculator.Test\ConsoleCalculator.Test.csproj", "{D55F1097-3C15-4B23-8BD2-C272C1007BB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{DE897CEF-BF1F-4108-9CC8-608B520F66D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE897CEF-BF1F-4108-9CC8-608B520F66D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE897CEF-BF1F-4108-9CC8-608B520F66D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D55F1097-3C15-4B23-8BD2-C272C1007BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D55F1097-3C15-4B23-8BD2-C272C1007BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D55F1097-3C15-4B23-8BD2-C272C1007BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D55F1097-3C15-4B23-8BD2-C272C1007BB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DE897CEF-BF1F-4108-9CC8-608B520F66D7} = {F62934E8-E416-4EC8-9BD0-91A7114B25CC}
+		{D55F1097-3C15-4B23-8BD2-C272C1007BB4} = {A9BE6407-DFD2-45E6-A36D-4CD6FFB646A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4963171-849C-4199-8673-B8A8DF37E2AF}
